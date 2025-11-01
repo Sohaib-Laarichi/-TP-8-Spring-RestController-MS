@@ -158,28 +158,56 @@ src/
 - **Error Handling**: Proper HTTP status codes and responses
 - **Validation Ready**: Bean validation framework integrated
 
-## API Testing Demonstration
+## 🧪 API Testing Demonstration
 
-## Create account :
-### JSON :
+Cette section présente des captures d'écran réelles des tests de l'API, démontrant le fonctionnement de tous les endpoints CRUD avec les formats JSON et XML.
+
+## 📝 Create Account (Création de compte)
+
+### 🔵 Format JSON
+*Démonstration de la création d'un nouveau compte bancaire via une requête POST avec un payload JSON. L'image montre la structure de la requête, les headers nécessaires, et la réponse du serveur avec le compte créé incluant l'ID auto-généré.*
+
 <img width="1917" height="973" alt="CreateJSON" src="https://github.com/user-attachments/assets/e20e2c15-0899-421a-9b7b-3b7c723fe2ce" />
 
-### XML :
+### 🟠 Format XML
+*Même opération de création de compte mais utilisant le format XML. Cette capture illustre la capacité de l'API à gérer la négociation de contenu et à accepter/retourner des données au format XML grâce à la configuration Jackson XML.*
+
 <img width="1919" height="963" alt="CreateXML" src="https://github.com/user-attachments/assets/f0afa70f-4674-45d6-b94e-e7e7e6d8c6d6" />
 
-## Update account :
-### JSON :
+## ✏️ Update Account (Modification de compte)
+
+### 🔵 Format JSON
+*Test de mise à jour d'un compte existant via PUT request. L'image montre comment modifier les propriétés d'un compte (solde, type, date) en utilisant l'ID du compte dans l'URL et en envoyant les nouvelles données au format JSON.*
+
 <img width="1919" height="972" alt="UpdateJSON" src="https://github.com/user-attachments/assets/c6ebaa6f-94ea-4e19-ace4-ce6e5f7b891a" />
 
-### XML :
+### 🟠 Format XML
+*Démonstration de la même fonctionnalité de mise à jour mais avec des données XML. Cette capture prouve que l'API peut traiter les modifications de comptes indépendamment du format de données utilisé.*
+
 <img width="1919" height="977" alt="UpdateXML" src="https://github.com/user-attachments/assets/c59d652d-815f-4d2f-899f-4525135e34e7" />
 
-## Delete account :
+## 🗑️ Delete Account (Suppression de compte)
+*Test de suppression d'un compte via une requête DELETE. L'image illustre l'utilisation de l'endpoint DELETE avec l'ID du compte dans l'URL et la réponse du serveur confirmant la suppression (status code 200 OK).*
+
 <img width="1919" height="983" alt="DeleteAcc" src="https://github.com/user-attachments/assets/e8459ad3-5e5d-45e9-ae90-e659827ecb22" />
 
-## Get accounts :
-### JSON :
+## 📋 Get Accounts (Récupération des comptes)
+
+### 🔵 Format JSON
+*Démonstration de la récupération de tous les comptes via une requête GET. L'image montre la réponse JSON contenant la liste complète des comptes avec toutes leurs propriétés (ID, solde, date de création, type).*
+
 <img width="1919" height="969" alt="GetJSON" src="https://github.com/user-attachments/assets/4c57cf45-b107-4f3a-977f-66ac24179be4" />
 
-### XML :
+### 🟠 Format XML
+*Même opération de récupération des comptes mais avec une réponse au format XML. Cette capture démontre la capacité de l'API à sérialiser automatiquement les données Java en XML grâce à la configuration Spring Boot et Jackson XML.*
+
 <img width="1919" height="982" alt="GetXML" src="https://github.com/user-attachments/assets/06be9de5-02f2-4428-9ed1-4bf135543455" />
+
+## 🎯 Points Techniques Démontrés
+
+- ✅ **Négociation de contenu** : Headers `Accept` et `Content-Type` appropriés
+- ✅ **Codes de statut HTTP** : 200 OK, 201 Created, 404 Not Found
+- ✅ **Sérialisation automatique** : Conversion Java ↔ JSON/XML
+- ✅ **Validation des endpoints** : Tous les endpoints CRUD fonctionnels
+- ✅ **Gestion des erreurs** : Responses appropriées pour les ressources inexistantes
+- ✅ **Structure REST** : URLs cohérentes et méthodes HTTP appropriées
