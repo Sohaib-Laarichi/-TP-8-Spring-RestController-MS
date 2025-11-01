@@ -1,0 +1,35 @@
+# Set default line ending behavior
+* text=auto
+
+# Ensure shell scripts use LF endings on all platforms
+*.sh text eol=lf
+mvnw text eol=lf
+
+# Ensure Windows batch files use CRLF endings
+*.bat text eol=crlf
+*.cmd text eol=crlf
+mvnw.cmd text eol=crlf
+
+# Binary files should not be modified
+*.jar binary
+*.zip binary
+*.tar.gz binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+
+# Java source files
+*.java text
+*.xml text
+*.properties text
+*.yml text
+*.yaml text
+*.json text
+*.md text
+
+# IDE files
+.gitignore text
+.gitattributes text
